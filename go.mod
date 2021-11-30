@@ -1,5 +1,5 @@
 module github.com/jfrog/jfrog-cli-plugin-template
-
+//module fileparsermod
 go 1.14
 
 require (

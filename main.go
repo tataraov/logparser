@@ -1,6 +1,10 @@
 package main
 
 import (
+	"fmt"
+
+	"github.com/jfrog/jfrog-cli-plugin-template/src/fileparser"
+
 	"github.com/jfrog/jfrog-cli-core/v2/plugins"
 	"github.com/jfrog/jfrog-cli-core/v2/plugins/components"
 	"github.com/jfrog/jfrog-cli-plugin-template/commands"
@@ -8,6 +12,10 @@ import (
 
 func main() {
 	plugins.PluginMain(getApp())
+	// our test functions
+	fileparser.TestParser()
+	fileparser.ReadLinebyLine()
+	fmt.Println(fileparser.IsExist("ERROR", "/Users/tataraov/apps/code-frog-cli/input/artifactory.log"))
 }
 
 func getApp() components.App {
